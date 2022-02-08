@@ -1,0 +1,57 @@
+.intro {
+  padding: 0 15px;
+}
+
+.intro__container {
+  @include basic-bg-img;
+  padding: 117px 0 116px 0;
+  background-image: url(../../img/intro-bg-img.jpg);
+  border-radius: 10px;
+}
+
+.intro__content {
+  width: 493px;
+  margin-left: 86px;
+}
+
+.intro__title {
+  @include basic-area;
+  @include font($fraunces, 72px, 900, 1);
+  color: $accent-color;
+  margin-bottom: 32px;
+}
+
+.intro__description {
+  @include basic-area;
+  @include font($barlow, 16px, 400, 26px);
+  color: $accent-opacity-color;
+  margin: 0 48px 56px 0;
+}
+
+@media only screen and (max-width: $mobile) {
+  .intro {
+    padding: 0 24px;
+  }
+
+  .intro__content {
+    @include basic-area;
+    width: 279px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .intro__container {
+    background-image: url(../../img/intro-bg-mobile.png);
+    background-size: cover;
+  }
+
+  .intro__title {
+    @include font($fraunces, 40px, 900, 40px);
+    margin-bottom: 24px;
+  }
+
+  .intro__description {
+    @include basic-area;  
+    margin-bottom: 39px;
+  }
+}

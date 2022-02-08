@@ -1,0 +1,126 @@
+.our-collection {
+  padding: 136px 0 200px 0;
+}
+
+.collection__container {
+  @include flex-display;
+  padding: 0 85px;
+}
+
+.our-collection__title {
+  @include font($fraunces, 150px, 900, 1.5);
+  @include basic-area;
+  margin-bottom: -110px;
+  text-align: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-color: $links-color;
+  background-image: linear-gradient(180deg, rgba(254, 252, 247, 0.0001) 0%, #FEFCF7 100%);
+}
+
+.our-collection__box {
+  margin-right: 30px;
+  text-align: center;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.our-collection__box-title {
+  @include basic-area;
+  @include font($fraunces, 24px, 900, 32px);
+  margin-top: 71px;
+  color: $main-color;
+}
+
+.our-collection__box-description {
+  @include basic-area;
+  @include font($barlow, 16px, 400, 26px);
+  margin-top: 24px;
+}
+
+@media only screen and (max-width: $tablet) {
+  .collection__container {
+    padding: 0 97px;
+    flex-direction: column;
+  }
+
+  .our-collection__title {
+    font-size: 96px;
+    line-height: 72px;
+    margin-bottom: -49px;
+  }
+
+  .our-collection__box {
+    @include flex-display;
+    @include basic-area;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  .collection__box-img {
+    display: inline-block;
+  }
+
+  .collection__text-wrapper {
+    display: inline-block;
+    margin-left: 34px;
+  }
+
+  .our-collection__box-title {
+    @include basic-area;
+  }
+}
+
+@media only screen  and (max-width: $mobile) {
+  .our-collection {
+    margin: 0 47px; 
+  }
+
+  .our-collection__title {
+    @include basic-area;
+    margin-bottom: 13px;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 72px;
+    color: $links-color;
+  }
+
+  .collection__container {
+    @include basic-area;
+    flex-direction: column;
+  }
+
+  .our-collection__box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 48px;
+  }
+
+  .collection__text-wrapper {
+    @include basic-area;
+    text-align: center;
+  }
+
+  .collection__box-img {
+    width: 200px;
+    height: 151px;
+  }
+
+  .our-collection__box-title {
+    margin-top: 24px;
+  }
+
+  .our-collection__box-description {
+    margin-top: 16px;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: #333D4B;
+  }
+}

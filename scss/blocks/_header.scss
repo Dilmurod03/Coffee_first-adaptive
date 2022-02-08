@@ -1,0 +1,141 @@
+.header {
+  padding: 45px 15px;
+}
+
+.header__container {
+  @include flex-display;
+  align-items: center;
+  position: relative;
+}
+
+.header__item-link {
+  color: $links-color;
+}
+
+.header__nav--opened {
+  display: inline-block;
+}
+
+.header__burger {
+  @include basic-area;
+  width: 16px;
+  height: 15px;
+  right: 0;
+  background-color: #fff;
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 25%;
+
+  &::before,
+  &::after,
+  &-inner {
+    width: 15px;
+    height: 3px;
+    display: block;
+    margin-bottom: 3px;
+    background-color: #000;
+    border-radius: 2px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+  }
+
+  &--opened &::after {
+    margin-bottom: 0;
+  }
+
+  &--opened &-inner {
+    display: none;
+  }
+
+}
+
+.header__burger {
+  display: none;
+}
+
+.header__burger--opened {
+  display: none;
+  position: relative;
+
+  & .header__burger-inner {
+    display: none;
+  }
+
+  &::before,
+  &::after {
+    width: 16px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &::before {
+    margin-bottom: 0;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+@media only screen and (max-width: $mobile) {
+  .header {
+    padding: 45px 24px;
+  }
+
+  .header__nav {
+    display: none;
+    height: calc(100vh - 82px);
+    width: 100%;
+    padding: 48px 24px 300px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: linear-gradient(0deg, #fefcf781 0%, #FEFCF7 55.94%);
+  }
+
+  .header__nav-list {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .header__burger {
+    display: block;
+  }
+
+  .header__nav-list {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+
+  .header__nav-item {
+    margin-right: 0;
+  }
+
+  .header__nav--opened {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & .header__nav-link {
+      @include font($fraunces, 24px, 900, 32px);
+      color: $main-color;
+    }
+    
+    & .header__nav-item {
+      margin: 0 auto;
+      margin-bottom: 32px;
+    }
+
+    & .header__nav-item:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

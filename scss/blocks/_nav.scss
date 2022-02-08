@@ -1,0 +1,16 @@
+.nav__list {
+  @include flex-display;
+  @include basic-area;
+}
+
+.nav__list-item {
+  margin-right: 31px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.nav__item-link {
+  @include font($barlow, 12px, 700, 15px);
+  color: $links-color;
+}

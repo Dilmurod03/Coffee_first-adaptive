@@ -1,0 +1,48 @@
+.footer {
+  margin-bottom: 88px;
+}
+
+.footer__container {
+  @include flex-display;
+  padding: 47px 85px;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: $benefits-bg-color;
+}
+
+.footer__logo {
+  @include basic-area;
+  margin-right: 103px;
+}
+
+.footer__nav {
+  @include basic-area;
+}
+
+.footer__list {
+  @include basic-area;
+}
+
+.footer__item {
+  @include basic-area;
+  margin-right: 33px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.footer__item-link {
+  @include basic-area;
+}
+
+.footer__icons {
+  @include basic-area;
+  margin-left: 369px;
+}
+
+.footer__icon-link {
+  margin-right: 24px;
+  &:last-child {
+    margin-right: 0;
+  }
+}

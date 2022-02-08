@@ -1,0 +1,79 @@
+.benfits__container {
+  padding-bottom: 151px;
+  text-align: center;
+}
+
+.benfits__content {
+  padding-top: 100px;
+  padding-bottom: 317px;
+  background-color: $benefits-bg-color;
+  border-radius: 10px;
+}
+
+.benefits__title {
+  @include basic-area;
+  @include font($fraunces, 40px, 900, 48px);
+  color: $accent-color;
+}
+
+.benefits__description {
+  @include basic-area;
+  @include font($barlow, 16px, 400, 26px);
+  width: 540px;
+  margin: 0 auto;
+  margin-top: 32px;
+  color: $accent-color;
+}
+
+.benfits__list {
+  @include basic-area;
+  @include flex-display;
+  padding: 0 85px;
+  margin-top: -131px;
+}
+
+.benefit {
+  @include basic-area;
+  display: inset-block;
+  padding: 200px 48px 48px 48px;
+  color: $accent-color;
+  background-color: $buttons-bg-color;
+  border-radius: 8px;
+  margin-right: 30px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.benefit--bean {
+  @include basic-bg-img;
+  background-image: url(../../img/coffee-bean.svg);
+  background-position: top 72px center;
+}
+
+.benefit--gift {
+  @include basic-bg-img;
+  background-image: url(../../img/coffe-gift.svg);
+  background-position: top 72px center;
+}
+
+.benefit--car {
+  @include basic-bg-img;
+  background-image: url(../../img/coffe-car.svg);
+  background-position: top 72px center;
+}
+
+.benefit__title {
+  @include basic-area;
+  @include font($fraunces, 24px, 900, 32px);
+  margin-bottom: 24px;
+}
+
+.benefit__description {
+  @include basic-area;
+  @include font($fraunces, 16px, 400, 26px);
+}
+
+@media only screen and (max-width: $tablet) {
+  
+}

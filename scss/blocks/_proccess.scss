@@ -1,0 +1,68 @@
+.proccess__container {
+  padding: 49px 85px 200px;
+}
+
+.proccess__title {
+  @include basic-area;
+  @include font($fraunces, 24px, 900, 32px);
+  margin-bottom: 80px;
+  color: $links-color;
+}
+
+.proccess__list {
+  @include flex-display;
+  @include basic-area;
+  margin-bottom: 64px;
+  position: relative;
+  justify-content: flex-start;
+  list-style: none;
+}
+
+.proccess__list::before {
+  content: "";
+  width: 760px;
+  height: 1px;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  border-bottom: 1px solid $procces-line-color;
+  display: inline-block;
+}
+
+.proccess__list-item {
+  @include basic-area;
+  width: 285px;
+  margin-right: 95px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.proccess__list-item::before {
+  content: "";
+  width: 31px;
+  height: 31px;
+  display: inline-block;
+  border: 2px solid #0E8784;
+  border-radius: 50%;
+}
+
+.proccess__item-span {
+  @include font($fraunces, 72px, 900, 72px);
+  display: block;
+  margin-top: 67px;
+  color: $procces-line-color;
+}
+
+.proccess__item-title {
+  @include basic-area;
+  @include font($fraunces, 32px, 900, 36px);
+  margin-top: 38px;
+  color: $main-color;
+}
+
+.proccess__item-description {
+  @include basic-area;
+  @include font($barlow, 16px, 400, 26px);
+  margin-top: 42px;
+}
